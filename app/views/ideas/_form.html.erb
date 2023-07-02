@@ -1,0 +1,32 @@
+<%= form_with(model: @idea, url: [@retro, @idea]) do |form| %>
+  <% if idea.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(idea.errors.count, "error") %> prohibited this idea from being saved:</h2>
+
+      <ul>
+        <% idea.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :retro_id, style: "display: block" %>
+    <%= form.number_field :retro_id %>
+  </div>
+
+  <div>
+    <%= form.label :topic, style: "display: block" %>
+    <%= form.text_area :topic %>
+  </div>
+
+  <div>
+    <%= form.label :template_type, style: "display: block" %>
+    <%= form.text_field :template_type %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

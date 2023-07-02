@@ -1,0 +1,10 @@
+<h1>Editing idea</h1>
+
+<%= render "form", idea: @idea, retro: @retro %>
+
+<br>
+
+<div>
+  <%= link_to "Show this idea", retro_idea_path(@retro,@idea) %>
+  <%= link_to "Back to ideas", retro_ideas_path %>
+</div>

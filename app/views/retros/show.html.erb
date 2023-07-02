@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @retro %>
+
+<div>
+  <%= link_to "Edit this retro", edit_retro_path(@retro) %> |
+  <%= link_to "Back to retros", retros_path %>
+
+  <%= button_to "Destroy this retro", @retro, method: :delete %>
+</div>

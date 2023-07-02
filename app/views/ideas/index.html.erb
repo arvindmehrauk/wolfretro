@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Ideas</h1>
+
+<div id="ideas">
+  <% @ideas.each do |idea| %>
+    <%= render idea %>
+    <p>
+      <%= link_to "Show this idea", retro_idea_path(@retro,idea) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New idea", new_retro_idea_path %>
